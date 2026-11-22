@@ -1,0 +1,254 @@
+2026-11-21 21:28:04.714 -05:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5139: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+ ---> System.Net.Sockets.SocketException (10048): Solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<StartAsync>g__OnBind|0(ListenOptions options, CancellationToken onBindCancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__16_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-11-21 21:28:04.763 -05:00 [FTL] La aplicación falló críticamente al iniciar.
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5139: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+ ---> System.Net.Sockets.SocketException (10048): Solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<StartAsync>g__OnBind|0(ListenOptions options, CancellationToken onBindCancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__16_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in C:\Users\steve\source\repos\Backend\Program.cs:line 109
+2026-11-21 21:29:39.687 -05:00 [INF] Now listening on: http://127.0.0.1:5140
+2026-11-21 21:29:39.716 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:29:39.718 -05:00 [INF] Hosting environment: Development
+2026-11-21 21:29:39.718 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 21:29:51.432 -05:00 [INF] HTTP GET /swagger responded 302 in 4.8444 ms
+2026-11-21 21:29:51.555 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 104.9770 ms
+2026-11-21 21:29:51.613 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 21:29:51.931 -05:00 [INF] HTTP GET /openapi/v1.json responded 200 in 320.7072 ms
+2026-11-21 21:30:48.370 -05:00 [INF] Now listening on: http://127.0.0.1:5140
+2026-11-21 21:30:48.407 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:30:48.408 -05:00 [INF] Hosting environment: Development
+2026-11-21 21:30:48.408 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 21:31:05.630 -05:00 [INF] HTTP GET /swagger responded 302 in 5.6227 ms
+2026-11-21 21:31:05.773 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 116.7585 ms
+2026-11-21 21:31:05.887 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 21:31:06.177 -05:00 [INF] HTTP GET /openapi/v1.json responded 200 in 293.0942 ms
+2026-11-21 21:31:38.076 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 21:31:38.117 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:31:38.121 -05:00 [INF] Hosting environment: Development
+2026-11-21 21:31:38.130 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 21:31:42.127 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 119.2593 ms
+2026-11-21 21:31:42.230 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 21:31:42.592 -05:00 [INF] HTTP GET /openapi/v1.json responded 200 in 363.6433 ms
+2026-11-21 21:32:27.760 -05:00 [INF] Intento de inicio de sesión para el correo steverobinsonferaud@gmail.com
+2026-11-21 21:32:29.848 -05:00 [INF] Inicio de sesión exitoso para usuario 2 (steverobinsonferaud@gmail.com)
+2026-11-21 21:32:29.866 -05:00 [INF] HTTP POST /api/auth/login responded 200 in 2304.6617 ms
+2026-11-21 21:32:30.123 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:32:30.123 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:32:30.124 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:32:30.264 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:32:30.298 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:32:30.314 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 282.8457 ms
+2026-11-21 21:32:30.312 -05:00 [INF] HTTP GET /api/productos responded 200 in 336.7060 ms
+2026-11-21 21:32:30.363 -05:00 [INF] Se obtuvieron 1 lotes
+2026-11-21 21:32:30.372 -05:00 [INF] HTTP GET /api/lotes responded 200 in 401.2940 ms
+2026-11-21 21:33:58.184 -05:00 [INF] Producto creado exitosamente: {"ID":4,"Nombre":"Samnsung Galaxy","$type":"ProductoDto"}
+2026-11-21 21:33:58.220 -05:00 [INF] HTTP POST /api/productos responded 201 in 289.1008 ms
+2026-11-21 21:33:58.243 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:33:58.245 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:33:58.245 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:33:58.257 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:33:58.261 -05:00 [INF] Se obtuvieron 1 lotes
+2026-11-21 21:33:58.299 -05:00 [INF] HTTP GET /api/lotes responded 200 in 54.7086 ms
+2026-11-21 21:33:58.298 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 53.6220 ms
+2026-11-21 21:33:58.321 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 21:33:58.328 -05:00 [INF] HTTP GET /api/productos responded 200 in 86.9005 ms
+2026-11-21 21:35:41.596 -05:00 [INF] Application is shutting down...
+2026-11-21 21:38:45.529 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 21:38:45.565 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:38:45.569 -05:00 [INF] Hosting environment: Development
+2026-11-21 21:38:45.574 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 21:39:45.217 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 21:39:45.491 -05:00 [INF] Intento de inicio de sesión para el correo steverobinsonferaud@gmail.com
+2026-11-21 21:39:47.472 -05:00 [INF] Inicio de sesión exitoso para usuario 2 (steverobinsonferaud@gmail.com)
+2026-11-21 21:39:47.499 -05:00 [INF] HTTP POST /api/auth/login responded 200 in 2286.3473 ms
+2026-11-21 21:39:47.725 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:39:47.726 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:39:47.744 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:39:47.998 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 21:39:48.072 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:39:48.096 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 525.1482 ms
+2026-11-21 21:39:48.096 -05:00 [INF] HTTP GET /api/productos responded 200 in 555.8967 ms
+2026-11-21 21:39:48.140 -05:00 [INF] Se obtuvieron 1 lotes
+2026-11-21 21:39:48.148 -05:00 [INF] HTTP GET /api/lotes responded 200 in 580.1902 ms
+2026-11-21 21:40:13.974 -05:00 [INF] Proveedor creado exitosamente: {"ID":3,"Nombre":"Niky","Direccion":"Circunvalación","RUC":"012121212121","$type":"ProveedorDto"}
+2026-11-21 21:40:14.019 -05:00 [INF] HTTP POST /api/proveedores responded 201 in 287.1778 ms
+2026-11-21 21:40:14.050 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:40:14.050 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:40:14.052 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:40:14.065 -05:00 [INF] Se obtuvieron 1 lotes
+2026-11-21 21:40:14.067 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 21:40:14.129 -05:00 [INF] HTTP GET /api/lotes responded 200 in 78.5115 ms
+2026-11-21 21:40:14.127 -05:00 [INF] Se obtuvieron 2 proveedores
+2026-11-21 21:40:14.134 -05:00 [INF] HTTP GET /api/productos responded 200 in 84.8585 ms
+2026-11-21 21:40:14.151 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 102.4416 ms
+2026-11-21 21:40:29.213 -05:00 [INF] Lote creado para producto 3 y proveedor 3: {"IDProveedor":3,"NombreProveedor":"Niky","Precio":23,"Stock":1222,"$type":"LoteResumenDto"}
+2026-11-21 21:40:29.242 -05:00 [INF] HTTP POST /api/productos/3/lotes responded 201 in 160.2126 ms
+2026-11-21 21:40:29.267 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:40:29.269 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:40:29.283 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 21:40:29.277 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:40:29.291 -05:00 [INF] Se obtuvieron 2 lotes
+2026-11-21 21:40:29.300 -05:00 [INF] Se obtuvieron 2 proveedores
+2026-11-21 21:40:29.295 -05:00 [INF] HTTP GET /api/productos responded 200 in 29.2852 ms
+2026-11-21 21:40:29.301 -05:00 [INF] HTTP GET /api/lotes responded 200 in 32.7734 ms
+2026-11-21 21:40:29.326 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 50.6330 ms
+2026-11-21 21:40:42.686 -05:00 [INF] Lote creado para producto 4 y proveedor 2: {"IDProveedor":2,"NombreProveedor":"Importadora Tech S.A.","Precio":10,"Stock":222,"$type":"LoteResumenDto"}
+2026-11-21 21:40:42.710 -05:00 [INF] HTTP POST /api/productos/4/lotes responded 201 in 40.4288 ms
+2026-11-21 21:40:42.734 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:40:42.735 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:40:42.734 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:40:42.746 -05:00 [INF] Se obtuvieron 3 lotes
+2026-11-21 21:40:42.746 -05:00 [INF] Se obtuvieron 2 proveedores
+2026-11-21 21:40:42.746 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 21:40:42.748 -05:00 [INF] HTTP GET /api/lotes responded 200 in 14.1579 ms
+2026-11-21 21:40:42.760 -05:00 [INF] HTTP GET /api/productos responded 200 in 25.9243 ms
+2026-11-21 21:40:42.753 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 18.7345 ms
+2026-11-21 21:41:06.900 -05:00 [INF] Lote eliminado para producto 4 y proveedor 2
+2026-11-21 21:41:06.907 -05:00 [INF] HTTP DELETE /api/lotes/4/2 responded 204 in 57.5365 ms
+2026-11-21 21:41:06.930 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:41:06.930 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:41:06.936 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:41:06.941 -05:00 [INF] Se obtuvieron 2 lotes
+2026-11-21 21:41:06.947 -05:00 [INF] HTTP GET /api/lotes responded 200 in 17.9068 ms
+2026-11-21 21:41:06.946 -05:00 [INF] Se obtuvieron 2 proveedores
+2026-11-21 21:41:06.952 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 17.8433 ms
+2026-11-21 21:41:06.953 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 21:41:06.963 -05:00 [INF] HTTP GET /api/productos responded 200 in 34.9992 ms
+2026-11-21 21:49:12.535 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:49:12.543 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:49:12.552 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:49:12.665 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 21:49:12.677 -05:00 [INF] Se obtuvieron 2 proveedores
+2026-11-21 21:49:12.678 -05:00 [INF] HTTP GET /api/productos responded 200 in 143.9852 ms
+2026-11-21 21:49:12.683 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 131.5209 ms
+2026-11-21 21:49:12.709 -05:00 [INF] Se obtuvieron 2 lotes
+2026-11-21 21:49:12.713 -05:00 [INF] HTTP GET /api/lotes responded 200 in 172.3129 ms
+2026-11-21 21:49:46.776 -05:00 [INF] Producto con ID 3 eliminado
+2026-11-21 21:49:46.780 -05:00 [INF] HTTP DELETE /api/productos/3 responded 204 in 43.4552 ms
+2026-11-21 21:49:46.803 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:49:46.806 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:49:46.811 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:49:46.814 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:49:46.817 -05:00 [INF] HTTP GET /api/productos responded 200 in 14.9918 ms
+2026-11-21 21:49:46.826 -05:00 [INF] Se obtuvieron 2 proveedores
+2026-11-21 21:49:46.820 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 21:49:46.827 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 14.9702 ms
+2026-11-21 21:49:46.832 -05:00 [INF] HTTP GET /api/lotes responded 200 in 27.6024 ms
+2026-11-21 21:50:02.525 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:50:02.526 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:50:02.535 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:50:02.545 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 21:50:02.550 -05:00 [INF] HTTP GET /api/productos responded 200 in 25.2539 ms
+2026-11-21 21:50:02.552 -05:00 [INF] HTTP GET /api/lotes responded 200 in 27.3694 ms
+2026-11-21 21:50:02.564 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:50:02.569 -05:00 [INF] Se obtuvieron 2 proveedores
+2026-11-21 21:50:02.575 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 14.0510 ms
+2026-11-21 21:52:43.105 -05:00 [INF] Intento de inicio de sesión para el correo steverobinsonferaud@gmail.com
+2026-11-21 21:52:43.211 -05:00 [INF] Inicio de sesión exitoso para usuario 2 (steverobinsonferaud@gmail.com)
+2026-11-21 21:52:43.219 -05:00 [INF] HTTP POST /api/auth/login responded 200 in 120.0248 ms
+2026-11-21 21:52:43.257 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:52:43.271 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:52:43.261 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:52:43.258 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:52:43.283 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 21:52:43.287 -05:00 [INF] Se obtuvieron 2 proveedores
+2026-11-21 21:52:43.295 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 34.2429 ms
+2026-11-21 21:52:43.279 -05:00 [INF] HTTP GET /api/productos responded 200 in 22.6407 ms
+2026-11-21 21:52:43.294 -05:00 [INF] HTTP GET /api/lotes responded 200 in 35.9956 ms
+2026-11-21 21:53:01.946 -05:00 [INF] Lote creado para producto 4 y proveedor 2: {"IDProveedor":2,"NombreProveedor":"Importadora Tech S.A.","Precio":10,"Stock":2,"$type":"LoteResumenDto"}
+2026-11-21 21:53:01.974 -05:00 [INF] HTTP POST /api/productos/4/lotes responded 201 in 42.0056 ms
+2026-11-21 21:53:02.001 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:53:02.001 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:53:02.002 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:53:02.013 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:53:02.018 -05:00 [INF] Se obtuvieron 1 lotes
+2026-11-21 21:53:02.033 -05:00 [INF] HTTP GET /api/lotes responded 200 in 32.8181 ms
+2026-11-21 21:53:02.030 -05:00 [INF] Se obtuvieron 2 proveedores
+2026-11-21 21:53:02.031 -05:00 [INF] HTTP GET /api/productos responded 200 in 31.0005 ms
+2026-11-21 21:53:02.047 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 45.6589 ms
+2026-11-21 21:53:12.539 -05:00 [INF] Proveedor con ID 2 eliminado
+2026-11-21 21:53:12.543 -05:00 [INF] HTTP DELETE /api/proveedores/2 responded 204 in 24.8504 ms
+2026-11-21 21:53:12.564 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:53:12.564 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:53:12.565 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:53:12.576 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:53:12.576 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 21:53:12.616 -05:00 [INF] HTTP GET /api/lotes responded 200 in 52.9913 ms
+2026-11-21 21:53:12.615 -05:00 [INF] HTTP GET /api/productos responded 200 in 51.5375 ms
+2026-11-21 21:53:12.639 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:53:12.647 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 82.3962 ms
+2026-11-21 21:54:43.524 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:54:43.524 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:54:43.525 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:54:43.539 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:54:43.542 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:54:43.544 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 19.5478 ms
+2026-11-21 21:54:43.543 -05:00 [INF] HTTP GET /api/productos responded 200 in 19.8914 ms
+2026-11-21 21:54:43.631 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 21:54:43.638 -05:00 [INF] HTTP GET /api/lotes responded 200 in 114.1456 ms
+2026-11-21 21:55:05.751 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:55:05.754 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:55:05.764 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:55:05.765 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 21:55:05.766 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:55:05.776 -05:00 [INF] HTTP GET /api/productos responded 200 in 26.5535 ms
+2026-11-21 21:55:05.778 -05:00 [INF] HTTP GET /api/lotes responded 200 in 28.7723 ms
+2026-11-21 21:55:05.782 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:55:05.805 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 40.0155 ms
+2026-11-21 21:55:20.554 -05:00 [INF] Lote creado para producto 4 y proveedor 3: {"IDProveedor":3,"NombreProveedor":"Niky","Precio":10,"Stock":4,"$type":"LoteResumenDto"}
+2026-11-21 21:55:20.574 -05:00 [INF] HTTP POST /api/productos/4/lotes responded 201 in 35.6230 ms
+2026-11-21 21:55:20.597 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:55:20.600 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:55:20.605 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:55:20.608 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:55:20.613 -05:00 [INF] Se obtuvieron 1 lotes
+2026-11-21 21:55:20.621 -05:00 [INF] HTTP GET /api/lotes responded 200 in 22.6844 ms
+2026-11-21 21:55:20.614 -05:00 [INF] HTTP GET /api/productos responded 200 in 17.5689 ms
+2026-11-21 21:55:20.613 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:55:20.645 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 40.3828 ms
+2026-11-21 21:56:08.347 -05:00 [INF] Application is shutting down...

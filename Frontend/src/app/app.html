@@ -102,86 +102,89 @@
 </main>
 
 <div *ngIf="currentUser" class="app-shell">
-  <aside class="sidebar">
-    <a class="brand" href="#" (click)="$event.preventDefault()" aria-label="Inicio">
-      <span class="brand-mark">IN</span>
-      <span class="brand-name">Inventario<span>Claro</span></span>
-    </a>
-
-    <div class="sidebar-label">MENÚ PRINCIPAL</div>
-    <nav aria-label="Menú principal">
-      <a class="nav-link active" href="#productos" aria-current="page">
-        <span class="nav-icon" aria-hidden="true">▦</span>
-        <span>Productos</span>
-        <span class="nav-count">{{ products.length }}</span>
-      </a>
-    </nav>
-
-    <div class="sidebar-bottom">
-      <div class="help-card">
-        <span class="help-icon" aria-hidden="true">i</span>
-        <strong>Un inventario claro</strong>
-        <p>Administra cada producto y sus lotes por proveedor.</p>
-      </div>
-      <div class="user-card">
-        <span class="avatar">{{ currentUser.nombre.charAt(0) }}{{ currentUser.apellido.charAt(0) }}</span>
-        <span class="user-details">
-          <strong>{{ currentUser.nombre }} {{ currentUser.apellido }}</strong>
-          <small>{{ currentUser.email }}</small>
-        </span>
-        <button class="icon-button logout-button" type="button" aria-label="Cerrar sesión" title="Cerrar sesión" (click)="logout()">
-          <span aria-hidden="true">↪</span>
-        </button>
-      </div>
+  <header class="topbar">
+    <div class="topbar-account">
+      <span class="avatar">{{ currentUser.nombre.charAt(0) }}{{ currentUser.apellido.charAt(0) }}</span>
+      <span class="user-details">
+        <strong>{{ currentUser.nombre }} {{ currentUser.apellido }}</strong>
+        <small>{{ currentUser.email }}</small>
+      </span>
     </div>
-  </aside>
+    <button class="button button-secondary logout-action" type="button" (click)="logout()">
+      <span aria-hidden="true">↪</span>
+      <span>Cerrar sesión</span>
+    </button>
+  </header>
 
-  <section class="main-panel">
-    <header class="topbar">
-      <div class="breadcrumb"><span>Inventario</span><span class="breadcrumb-separator">/</span><strong>Productos</strong></div>
-      <div class="topbar-user">
-        <span class="online-dot"></span>
-        <span>Sesión activa</span>
-      </div>
-    </header>
+  <main id="productos" class="page-content">
+    <div *ngIf="errorMessage" class="alert alert-error page-alert" role="alert">
+      <span>{{ errorMessage }}</span>
+      <button class="alert-close" type="button" aria-label="Cerrar mensaje" (click)="clearMessages()">×</button>
+    </div>
+    <div *ngIf="successMessage" class="alert alert-success page-alert" role="status">
+      <span>{{ successMessage }}</span>
+      <button class="alert-close" type="button" aria-label="Cerrar mensaje" (click)="clearMessages()">×</button>
+    </div>
 
-    <main id="productos" class="page-content">
-      <div *ngIf="errorMessage" class="alert alert-error page-alert" role="alert">
-        <span>{{ errorMessage }}</span>
-        <button class="alert-close" type="button" aria-label="Cerrar mensaje" (click)="clearMessages()">×</button>
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow">RESUMEN DE EXISTENCIAS</p>
+        <h1>Productos</h1>
+        <p class="page-description">Gestiona productos, proveedores, precios y stock por lote.</p>
       </div>
-      <div *ngIf="successMessage" class="alert alert-success page-alert" role="status">
-        <span>{{ successMessage }}</span>
-        <button class="alert-close" type="button" aria-label="Cerrar mensaje" (click)="clearMessages()">×</button>
-      </div>
-
-      <section class="page-heading">
-        <div>
-          <p class="eyebrow">RESUMEN DE EXISTENCIAS</p>
-          <h1>Productos</h1>
-          <p class="page-description">Gestiona productos, proveedores, precios y stock por lote.</p>
-        </div>
+      <div class="page-actions">
+        <button class="button button-secondary" type="button" (click)="openNewSupplier()">
+          <span class="plus-icon" aria-hidden="true">+</span> Agregar proveedor
+        </button>
         <button class="button button-primary add-product-button" type="button" (click)="openNewProduct()">
           <span class="plus-icon" aria-hidden="true">+</span> Agregar producto
         </button>
-      </section>
+      </div>
+    </section>
 
       <section class="summary-grid" aria-label="Resumen del inventario">
         <article class="summary-card">
           <span class="summary-icon summary-icon-violet" aria-hidden="true">▦</span>
           <div><span class="summary-label">Productos registrados</span><strong>{{ products.length }}</strong></div>
-          <span class="summary-caption">en catálogo</span>
         </article>
         <article class="summary-card">
           <span class="summary-icon summary-icon-green" aria-hidden="true">↗</span>
           <div><span class="summary-label">Unidades en stock</span><strong>{{ totalStock | number }}</strong></div>
-          <span class="summary-caption">en todos los lotes</span>
         </article>
         <article class="summary-card">
           <span class="summary-icon summary-icon-orange" aria-hidden="true">♧</span>
           <div><span class="summary-label">Proveedores activos</span><strong>{{ totalSuppliers }}</strong></div>
-          <span class="summary-caption">con productos ingresados</span>
         </article>
+      </section>
+
+      <section class="supplier-section" aria-labelledby="supplier-list-title">
+        <header class="supplier-section-heading">
+          <div>
+            <h2 id="supplier-list-title">Proveedores registrados</h2>
+            <p>Administra los proveedores disponibles para los lotes.</p>
+          </div>
+          <span class="lot-count">{{ suppliers.length }} {{ suppliers.length === 1 ? 'proveedor' : 'proveedores' }}</span>
+        </header>
+        <div *ngIf="suppliers.length === 0" class="supplier-empty">
+          Aún no hay proveedores registrados.
+        </div>
+        <div *ngFor="let supplier of suppliers" class="supplier-row">
+          <div class="supplier-identity">
+            <span class="supplier-avatar">{{ supplier.nombre.charAt(0).toUpperCase() }}</span>
+            <strong>{{ supplier.nombre }}</strong>
+          </div>
+          <span class="supplier-address">{{ supplier.direccion }}</span>
+          <span class="supplier-ruc">RUC {{ supplier.ruc }}</span>
+          <button
+            class="text-button text-danger supplier-delete"
+            type="button"
+            [disabled]="submitting"
+            [attr.aria-label]="'Eliminar proveedor ' + supplier.nombre"
+            (click)="deleteSupplier(supplier)"
+          >
+            Eliminar
+          </button>
+        </div>
       </section>
 
       <section class="inventory-section">
@@ -260,9 +263,7 @@
           </article>
         </div>
       </section>
-      <footer class="page-footer">Inventario Claro <span>·</span> Gestión sencilla de productos</footer>
-    </main>
-  </section>
+  </main>
 </div>
 
 <div *ngIf="activeModal" class="modal-backdrop" (click)="closeModal()">
@@ -270,7 +271,7 @@
     class="modal-card"
     role="dialog"
     aria-modal="true"
-    [attr.aria-labelledby]="activeModal === 'product' ? 'product-modal-title' : 'lot-modal-title'"
+    [attr.aria-labelledby]="activeModal === 'product' ? 'product-modal-title' : activeModal === 'lot' ? 'lot-modal-title' : 'supplier-modal-title'"
     (click)="$event.stopPropagation()"
   >
     <button class="modal-close icon-button" type="button" aria-label="Cerrar" (click)="closeModal()">×</button>
@@ -286,6 +287,50 @@
           <button class="button button-secondary" type="button" (click)="closeModal()">Cancelar</button>
           <button class="button button-primary" type="submit" [disabled]="submitting || productFormRef.invalid">
             {{ submitting ? 'Guardando...' : editingProduct ? 'Guardar cambios' : 'Agregar producto' }}
+          </button>
+        </div>
+      </form>
+    </ng-container>
+
+    <ng-container *ngIf="activeModal === 'supplier'">
+      <p class="eyebrow">NUEVO REGISTRO</p>
+      <h2 id="supplier-modal-title">Agregar proveedor</h2>
+      <p class="modal-description">Registra los datos del proveedor para asociarlo a los lotes de productos.</p>
+      <div *ngIf="errorMessage" class="alert alert-error modal-alert" role="alert">{{ errorMessage }}</div>
+      <form class="form-stack" (ngSubmit)="saveSupplier()" #supplierFormRef="ngForm">
+        <label for="supplier-name">Nombre del proveedor</label>
+        <input
+          id="supplier-name"
+          name="supplierName"
+          type="text"
+          maxlength="150"
+          [(ngModel)]="supplierForm.nombre"
+          required
+        />
+        <label for="supplier-address">Dirección</label>
+        <input
+          id="supplier-address"
+          name="supplierAddress"
+          type="text"
+          maxlength="250"
+          [(ngModel)]="supplierForm.direccion"
+          required
+        />
+        <label for="supplier-ruc">RUC</label>
+        <input
+          id="supplier-ruc"
+          name="supplierRuc"
+          type="text"
+          minlength="10"
+          maxlength="13"
+          [(ngModel)]="supplierForm.ruc"
+          required
+        />
+        <p class="field-hint">El RUC debe tener entre 10 y 13 caracteres.</p>
+        <div class="modal-actions">
+          <button class="button button-secondary" type="button" (click)="closeModal()">Cancelar</button>
+          <button class="button button-primary" type="submit" [disabled]="submitting || supplierFormRef.invalid">
+            {{ submitting ? 'Guardando...' : 'Guardar proveedor' }}
           </button>
         </div>
       </form>

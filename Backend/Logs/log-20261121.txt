@@ -293,3 +293,104 @@ System.InvalidOperationException: Record type 'DTOs.Producto.ProductoCreateUpdat
 2026-11-21 20:52:11.344 -05:00 [INF] Se obtuvieron 1 proveedores
 2026-11-21 20:52:11.379 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 201.2430 ms
 2026-11-21 20:53:39.829 -05:00 [INF] Application is shutting down...
+2026-11-21 21:13:11.408 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 21:13:11.441 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:13:11.446 -05:00 [INF] Hosting environment: Development
+2026-11-21 21:13:11.451 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 21:13:29.995 -05:00 [INF] Application is shutting down...
+2026-11-21 21:13:38.213 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 21:13:38.254 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:13:38.258 -05:00 [INF] Hosting environment: Development
+2026-11-21 21:13:38.261 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 21:13:46.942 -05:00 [INF] HTTP GET /swagger responded 302 in 5.9501 ms
+2026-11-21 21:13:47.065 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 94.0007 ms
+2026-11-21 21:13:47.189 -05:00 [INF] HTTP GET /swagger/index.css responded 200 in 11.5369 ms
+2026-11-21 21:13:47.254 -05:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 79.8576 ms
+2026-11-21 21:13:47.254 -05:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 40.2396 ms
+2026-11-21 21:13:47.295 -05:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 83.0539 ms
+2026-11-21 21:13:47.588 -05:00 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 0.1637 ms
+2026-11-21 21:13:47.588 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 21:13:48.007 -05:00 [INF] HTTP GET /openapi/v1.json responded 200 in 421.3924 ms
+2026-11-21 21:14:36.523 -05:00 [INF] Intento de inicio de sesión para el correo steverobinsonferaud@gmail.com
+2026-11-21 21:14:38.635 -05:00 [INF] Inicio de sesión exitoso para usuario 2 (steverobinsonferaud@gmail.com)
+2026-11-21 21:14:38.651 -05:00 [INF] HTTP POST /api/auth/login responded 200 in 2725.0968 ms
+2026-11-21 21:14:38.939 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:14:38.941 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:14:39.084 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 21:14:39.104 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:14:39.124 -05:00 [INF] HTTP GET /api/productos responded 200 in 300.9897 ms
+2026-11-21 21:14:39.160 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:14:39.167 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 21:14:39.183 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 98.9690 ms
+2026-11-21 21:14:39.186 -05:00 [INF] HTTP GET /api/lotes responded 200 in 344.9884 ms
+2026-11-21 21:14:45.723 -05:00 [INF] Producto con ID 2 eliminado
+2026-11-21 21:14:45.734 -05:00 [INF] HTTP DELETE /api/productos/2 responded 204 in 221.8459 ms
+2026-11-21 21:14:45.773 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:14:45.773 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:14:45.771 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:14:45.786 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:14:45.880 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:14:45.894 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 121.4526 ms
+2026-11-21 21:14:45.890 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 21:14:45.892 -05:00 [INF] HTTP GET /api/productos responded 200 in 122.7056 ms
+2026-11-21 21:14:45.902 -05:00 [INF] HTTP GET /api/lotes responded 200 in 129.8358 ms
+2026-11-21 21:15:03.193 -05:00 [INF] Lote creado para producto 3 y proveedor 2: {"IDProveedor":2,"NombreProveedor":"Importadora Tech S.A.","Precio":10,"Stock":2,"$type":"LoteResumenDto"}
+2026-11-21 21:15:03.245 -05:00 [INF] HTTP POST /api/productos/3/lotes responded 201 in 182.7237 ms
+2026-11-21 21:15:03.266 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:15:03.266 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:15:03.279 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:15:03.266 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:15:03.285 -05:00 [INF] HTTP GET /api/productos responded 200 in 20.4562 ms
+2026-11-21 21:15:03.282 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:15:03.294 -05:00 [INF] Se obtuvieron 1 lotes
+2026-11-21 21:15:03.308 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 41.9252 ms
+2026-11-21 21:15:03.311 -05:00 [INF] HTTP GET /api/lotes responded 200 in 44.6829 ms
+2026-11-21 21:15:20.020 -05:00 [INF] Producto con ID 3 actualizado a 'Papitas fritas ru'
+2026-11-21 21:15:20.031 -05:00 [INF] HTTP PUT /api/productos/3 responded 204 in 50.3719 ms
+2026-11-21 21:15:20.060 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 21:15:20.063 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 21:15:20.062 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 21:15:20.070 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 21:15:20.069 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 21:15:20.082 -05:00 [INF] HTTP GET /api/productos responded 200 in 26.9794 ms
+2026-11-21 21:15:20.080 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 17.5478 ms
+2026-11-21 21:15:20.079 -05:00 [INF] Se obtuvieron 1 lotes
+2026-11-21 21:15:20.101 -05:00 [INF] HTTP GET /api/lotes responded 200 in 42.5850 ms
+2026-11-21 21:16:16.885 -05:00 [INF] Application is shutting down...
+2026-11-21 21:16:46.802 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 21:16:46.843 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:16:46.845 -05:00 [INF] Hosting environment: Development
+2026-11-21 21:16:46.845 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 21:16:58.874 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 21:16:59.223 -05:00 [INF] HTTP GET /openapi/v1.json responded 200 in 352.5829 ms
+2026-11-21 21:18:47.930 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 21:18:47.962 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:18:47.962 -05:00 [INF] Hosting environment: Development
+2026-11-21 21:18:47.962 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 21:18:56.236 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 21:18:56.538 -05:00 [INF] HTTP GET /openapi/v1.json responded 200 in 314.9828 ms
+2026-11-21 21:20:07.264 -05:00 [INF] HTTP GET /swagger responded 302 in 3.6526 ms
+2026-11-21 21:20:07.338 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 69.6838 ms
+2026-11-21 21:20:16.858 -05:00 [INF] HTTP GET /swagger responded 302 in 0.0811 ms
+2026-11-21 21:20:16.862 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 2.3609 ms
+2026-11-21 21:20:21.476 -05:00 [INF] HTTP GET /swagger responded 302 in 0.0496 ms
+2026-11-21 21:20:21.478 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 0.2374 ms
+2026-11-21 21:20:31.260 -05:00 [INF] HTTP GET /swagger responded 302 in 0.0397 ms
+2026-11-21 21:20:31.261 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 0.2474 ms
+2026-11-21 21:22:59.668 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 21:22:59.702 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:22:59.703 -05:00 [INF] Hosting environment: Development
+2026-11-21 21:22:59.703 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 21:23:05.528 -05:00 [INF] HTTP GET /swagger responded 302 in 6.7231 ms
+2026-11-21 21:23:05.664 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 121.5050 ms
+2026-11-21 21:23:05.692 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 21:23:06.002 -05:00 [INF] HTTP GET /openapi/v1.json responded 200 in 312.0893 ms
+2026-11-21 21:26:56.245 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 21:26:56.280 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:26:56.291 -05:00 [INF] Hosting environment: Development
+2026-11-21 21:26:56.301 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 21:27:11.842 -05:00 [INF] HTTP GET /swagger responded 302 in 5.6004 ms
+2026-11-21 21:27:11.981 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 110.4969 ms
+2026-11-21 21:27:12.320 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 21:27:12.364 -05:00 [INF] HTTP GET /v1 responded 404 in 57.4225 ms
+2026-11-21 21:28:04.954 -05:00 [INF] Application is shutting down...

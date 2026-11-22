@@ -14,3 +14,4 @@ C:\Users\steve\source\repos\Database\obj\Debug\net11.0\Database.pdb
 C:\Users\steve\source\repos\Database\obj\Debug\net11.0\Database.genruntimeconfig.cache
 C:\Users\steve\source\repos\Database\obj\Debug\net11.0\ref\Database.dll
 C:\Users\steve\source\repos\Database\obj\Debug\net11.0\Database.csproj.Up2Date
+C:\Users\steve\source\repos\Database\obj\Debug\net11.0\Database.sourcelink.json

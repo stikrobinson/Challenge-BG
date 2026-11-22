@@ -26,6 +26,12 @@ export interface ProductInput {
   nombre: string;
 }
 
+export interface SupplierInput {
+  nombre: string;
+  direccion: string;
+  ruc: string;
+}
+
 export interface LotInput {
   idProducto: number;
   idProveedor: number;
@@ -56,6 +62,14 @@ export class InventoryService {
 
   createProduct(product: ProductInput) {
     return this.http.post<Product>('/api/productos', product);
+  }
+
+  createSupplier(supplier: SupplierInput) {
+    return this.http.post<Supplier>('/api/proveedores', supplier);
+  }
+
+  deleteSupplier(id: number) {
+    return this.http.delete<void>(`/api/proveedores/${id}`);
   }
 
   updateProduct(id: number, product: ProductInput) {

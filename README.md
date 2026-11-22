@@ -20,6 +20,6 @@ npm start
 ```
 
 Frontend: http://127.0.0.1:62175  
-Swagger: http://localhost::5139/swagger
+Swagger: http://localhost:5139/swagger
 
 No hay usuarios precargados; crea una cuenta en la pantalla de registro.

@@ -24,7 +24,7 @@ export class App implements OnInit {
   successMessage = '';
   loading = false;
   submitting = false;
-  activeModal: 'product' | 'lot' | null = null;
+  activeModal: 'product' | 'lot' | 'supplier' | null = null;
   editingProduct: Product | null = null;
   editingLot: Lot | null = null;
   selectedProduct: Product | null = null;
@@ -33,6 +33,7 @@ export class App implements OnInit {
   credentials = { email: '', password: '' };
   registration = { nombre: '', apellido: '', email: '', password: '' };
   productForm = { nombre: '' };
+  supplierForm = { nombre: '', direccion: '', ruc: '' };
   lotForm = { idProveedor: 0, precio: 0, stock: 0 };
 
   constructor(
@@ -214,6 +215,11 @@ export class App implements OnInit {
     this.openModal('product');
   }
 
+  openNewSupplier(): void {
+    this.supplierForm = { nombre: '', direccion: '', ruc: '' };
+    this.openModal('supplier');
+  }
+
   openEditProduct(product: Product): void {
     this.editingProduct = product;
     this.productForm = { nombre: product.nombre };
@@ -263,6 +269,34 @@ export class App implements OnInit {
       ? 'El producto se actualizó correctamente.'
       : 'El producto se agregó al inventario.';
     this.runMutation(request, message);
+  }
+
+  saveSupplier(): void {
+    const nombre = this.supplierForm.nombre.trim();
+    const direccion = this.supplierForm.direccion.trim();
+    const ruc = this.supplierForm.ruc.trim();
+
+    if (!nombre || !direccion || !ruc) {
+      this.errorMessage = 'Completa todos los campos del proveedor.';
+      return;
+    }
+    if (nombre.length > 150) {
+      this.errorMessage = 'El nombre del proveedor no puede exceder los 150 caracteres.';
+      return;
+    }
+    if (direccion.length > 250) {
+      this.errorMessage = 'La dirección no puede exceder los 250 caracteres.';
+      return;
+    }
+    if (ruc.length < 10 || ruc.length > 13) {
+      this.errorMessage = 'El RUC debe tener entre 10 y 13 caracteres.';
+      return;
+    }
+
+    this.runMutation(
+      this.inventory.createSupplier({ nombre, direccion, ruc }),
+      'El proveedor se agregó correctamente.',
+    );
   }
 
   saveLot(): void {
@@ -341,12 +375,27 @@ export class App implements OnInit {
     );
   }
 
+  deleteSupplier(supplier: Supplier): void {
+    if (
+      !window.confirm(
+        `¿Eliminar al proveedor "${supplier.nombre}"? Si tiene lotes asociados, todos los lotes de ese proveedor se van a eliminar.`,
+      )
+    ) {
+      return;
+    }
+
+    this.runMutation(
+      this.inventory.deleteSupplier(supplier.id),
+      'El proveedor se eliminó correctamente.',
+    );
+  }
+
   clearMessages(): void {
     this.errorMessage = '';
     this.successMessage = '';
   }
 
-  private openModal(modal: 'product' | 'lot'): void {
+  private openModal(modal: 'product' | 'lot' | 'supplier'): void {
     this.clearMessages();
     this.activeModal = modal;
   }

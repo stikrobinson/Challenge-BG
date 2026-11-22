@@ -4,8 +4,11 @@ using Backend.Services;
 using Database;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.OpenApi;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi;
 using Microsoft.IdentityModel.Tokens;
+using NSwag.AspNetCore;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
@@ -23,7 +26,10 @@ try
         .ReadFrom.Services(services));
 
     builder.Services.AddControllers();
-    builder.Services.AddOpenApi();
+    builder.Services.AddOpenApi(options =>
+    {
+        options.OpenApiVersion = OpenApiSpecVersion.OpenApi3_0;
+    });
 
     builder.Services.AddIdentityCore<Usuario>(options =>
     {
@@ -87,7 +93,8 @@ try
         app.MapOpenApi();
         app.UseSwaggerUi(options =>
         {
-            options.DocumentPath = "/openapi/v1.json";
+            options.SwaggerRoutes.Add(
+                new SwaggerUiRoute("v1", "/openapi/v1.json"));
         });
     }
 
