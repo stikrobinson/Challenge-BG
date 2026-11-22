@@ -1,0 +1,295 @@
+2026-11-21 16:04:13.019 -05:00 [FTL] La aplicación falló críticamente al iniciar.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\steve\source\repos\Backend\Backend\Program.cs:line 81
+2026-11-21 16:06:05.128 -05:00 [FTL] La aplicación falló críticamente al iniciar.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\steve\source\repos\Backend\Backend\Program.cs:line 81
+2026-11-21 17:02:31.527 -05:00 [FTL] La aplicación falló críticamente al iniciar.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\steve\source\repos\Backend\Backend\Program.cs:line 81
+2026-11-21 17:06:58.574 -05:00 [FTL] La aplicación falló críticamente al iniciar.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\steve\source\repos\Backend\Backend\Program.cs:line 81
+2026-11-21 17:08:21.997 -05:00 [FTL] La aplicación falló críticamente al iniciar.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\steve\source\repos\Backend\Backend\Program.cs:line 81
+2026-11-21 17:12:58.854 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 17:12:58.890 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 17:12:58.899 -05:00 [INF] Hosting environment: Development
+2026-11-21 17:12:58.906 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend\Backend
+2026-11-21 17:17:55.041 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 17:17:56.119 -05:00 [INF] Intentando registrar nuevo usuario con correo admin@inventario.com
+2026-11-21 17:17:58.096 -05:00 [INF] Usuario registrado exitosamente con ID 1 y correo admin@inventario.com
+2026-11-21 17:17:58.121 -05:00 [INF] HTTP POST /api/auth/registro responded 200 in 3087.5664 ms
+2026-11-21 17:18:02.434 -05:00 [INF] Intento de inicio de sesión para el correo admin@inventario.com
+2026-11-21 17:18:02.660 -05:00 [INF] Inicio de sesión exitoso para usuario 1 (admin@inventario.com)
+2026-11-21 17:18:02.670 -05:00 [INF] HTTP POST /api/auth/login responded 200 in 256.2547 ms
+2026-11-21 17:19:43.602 -05:00 [INF] Consultando perfil del usuario 1
+2026-11-21 17:19:43.654 -05:00 [INF] HTTP GET /api/auth/perfil responded 200 in 130.9918 ms
+2026-11-21 17:19:48.330 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 17:19:48.365 -05:00 [INF] Se obtuvieron 0 productos
+2026-11-21 17:19:48.379 -05:00 [INF] HTTP GET /api/productos responded 200 in 61.6373 ms
+2026-11-21 17:19:50.566 -05:00 [ERR] HTTP POST /api/productos responded 500 in 14.7504 ms
+System.InvalidOperationException: Record type 'DTOs.Producto.ProductoCreateUpdateDto' has validation metadata defined on property 'Nombre' that will be ignored. 'Nombre' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<CreateBinderDelegate>g__Bind|0(ControllerContext controllerContext, Object controller, Dictionary`2 arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-21 17:19:50.612 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Record type 'DTOs.Producto.ProductoCreateUpdateDto' has validation metadata defined on property 'Nombre' that will be ignored. 'Nombre' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<CreateBinderDelegate>g__Bind|0(ControllerContext controllerContext, Object controller, Dictionary`2 arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-21 17:20:01.471 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 17:20:01.482 -05:00 [INF] Se obtuvieron 0 productos
+2026-11-21 17:20:01.487 -05:00 [INF] HTTP GET /api/productos responded 200 in 16.9014 ms
+2026-11-21 17:20:03.052 -05:00 [ERR] HTTP POST /api/productos responded 500 in 10.8200 ms
+System.InvalidOperationException: Record type 'DTOs.Producto.ProductoCreateUpdateDto' has validation metadata defined on property 'Nombre' that will be ignored. 'Nombre' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<CreateBinderDelegate>g__Bind|0(ControllerContext controllerContext, Object controller, Dictionary`2 arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-21 17:20:03.062 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Record type 'DTOs.Producto.ProductoCreateUpdateDto' has validation metadata defined on property 'Nombre' that will be ignored. 'Nombre' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<CreateBinderDelegate>g__Bind|0(ControllerContext controllerContext, Object controller, Dictionary`2 arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-21 17:21:14.937 -05:00 [INF] Application is shutting down...
+2026-11-21 17:23:45.260 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 17:23:45.297 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 17:23:45.301 -05:00 [INF] Hosting environment: Development
+2026-11-21 17:23:45.305 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend\Backend
+2026-11-21 17:23:59.538 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 17:23:59.779 -05:00 [INF] Intentando registrar nuevo usuario con correo admin@inventario.com
+2026-11-21 17:24:01.605 -05:00 [WRN] Registro rechazado: el correo admin@inventario.com ya está registrado
+2026-11-21 17:24:01.625 -05:00 [INF] HTTP POST /api/auth/registro responded 400 in 2089.8162 ms
+2026-11-21 17:24:06.704 -05:00 [INF] Intento de inicio de sesión para el correo admin@inventario.com
+2026-11-21 17:24:06.980 -05:00 [INF] Inicio de sesión exitoso para usuario 1 (admin@inventario.com)
+2026-11-21 17:24:06.993 -05:00 [INF] HTTP POST /api/auth/login responded 200 in 313.9749 ms
+2026-11-21 17:24:10.716 -05:00 [INF] Consultando perfil del usuario 1
+2026-11-21 17:24:10.775 -05:00 [INF] HTTP GET /api/auth/perfil responded 200 in 134.1979 ms
+2026-11-21 17:24:14.002 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 17:24:14.033 -05:00 [INF] Se obtuvieron 0 productos
+2026-11-21 17:24:14.045 -05:00 [INF] HTTP GET /api/productos responded 200 in 55.8436 ms
+2026-11-21 17:24:15.940 -05:00 [INF] Producto creado exitosamente: {"ID":1,"Nombre":"Celular Samsung Galaxy S25","$type":"ProductoDto"}
+2026-11-21 17:24:15.974 -05:00 [INF] HTTP POST /api/productos responded 201 in 218.8745 ms
+2026-11-21 17:24:17.717 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 17:24:17.729 -05:00 [INF] Se obtuvieron 1 productos
+2026-11-21 17:24:17.732 -05:00 [INF] HTTP GET /api/productos responded 200 in 16.4583 ms
+2026-11-21 17:24:21.190 -05:00 [INF] Buscando producto con ID 1
+2026-11-21 17:24:21.203 -05:00 [INF] HTTP GET /api/productos/1 responded 200 in 24.0015 ms
+2026-11-21 17:24:26.376 -05:00 [INF] Producto con ID 1 actualizado a 'Celular Samsung Galaxy S25 Ultra'
+2026-11-21 17:24:26.381 -05:00 [INF] HTTP PUT /api/productos/1 responded 204 in 40.1086 ms
+2026-11-21 17:24:31.815 -05:00 [INF] Buscando producto con ID 1
+2026-11-21 17:24:31.827 -05:00 [INF] HTTP GET /api/productos/1 responded 200 in 13.3398 ms
+2026-11-21 17:24:34.870 -05:00 [INF] Obteniendo lotes para el producto con ID 1
+2026-11-21 17:24:34.966 -05:00 [INF] Se obtuvieron 0 lotes para el producto 1
+2026-11-21 17:24:34.978 -05:00 [INF] HTTP GET /api/productos/1/lotes responded 200 in 118.8989 ms
+2026-11-21 17:24:38.186 -05:00 [WRN] Intento de crear lote con proveedor inexistente ID 1 para producto 1
+2026-11-21 17:24:38.192 -05:00 [INF] HTTP POST /api/productos/1/lotes responded 404 in 41.7624 ms
+2026-11-21 17:24:45.852 -05:00 [INF] Proveedor creado exitosamente: {"ID":1,"Nombre":"Importadora Tech S.A.","Direccion":"Av. Francisco de Orellana, Guayaquil","RUC":"0991234567001","$type":"ProveedorDto"}
+2026-11-21 17:24:45.869 -05:00 [INF] HTTP POST /api/proveedores responded 201 in 56.6205 ms
+2026-11-21 17:24:56.847 -05:00 [INF] Lote creado para producto 1 y proveedor 1: {"IDProveedor":1,"NombreProveedor":"Importadora Tech S.A.","Precio":850,"Stock":15,"$type":"LoteResumenDto"}
+2026-11-21 17:24:56.866 -05:00 [INF] HTTP POST /api/productos/1/lotes responded 201 in 62.8703 ms
+2026-11-21 17:25:03.200 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 17:25:03.211 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 17:25:03.216 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 26.9987 ms
+2026-11-21 17:25:06.239 -05:00 [INF] Buscando proveedor con ID 1
+2026-11-21 17:25:06.252 -05:00 [INF] HTTP GET /api/proveedores/1 responded 200 in 24.9258 ms
+2026-11-21 17:25:08.423 -05:00 [INF] Proveedor con ID 1 actualizado (RUC: 0991234567001)
+2026-11-21 17:25:08.428 -05:00 [INF] HTTP PUT /api/proveedores/1 responded 204 in 28.3843 ms
+2026-11-21 17:25:12.542 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 17:25:12.559 -05:00 [INF] Se obtuvieron 1 lotes
+2026-11-21 17:25:12.566 -05:00 [INF] HTTP GET /api/lotes responded 200 in 35.7986 ms
+2026-11-21 17:25:16.652 -05:00 [WRN] Intento de crear lote duplicado para producto 1 y proveedor 1
+2026-11-21 17:25:16.659 -05:00 [INF] HTTP POST /api/lotes responded 409 in 45.6363 ms
+2026-11-21 17:25:29.555 -05:00 [INF] Buscando lote para producto 1 y proveedor 1
+2026-11-21 17:25:29.572 -05:00 [INF] HTTP GET /api/lotes/1/1 responded 200 in 28.0899 ms
+2026-11-21 17:25:38.642 -05:00 [INF] Lote actualizado para producto 1 y proveedor 1 (Precio: 780, Stock: 40)
+2026-11-21 17:25:38.650 -05:00 [INF] HTTP PUT /api/lotes/1/1 responded 204 in 37.4883 ms
+2026-11-21 17:25:41.788 -05:00 [INF] Lote eliminado para producto 1 y proveedor 1
+2026-11-21 17:25:41.793 -05:00 [INF] HTTP DELETE /api/lotes/1/1 responded 204 in 35.9701 ms
+2026-11-21 17:25:44.535 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 17:25:44.544 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 17:25:44.551 -05:00 [INF] HTTP GET /api/lotes responded 200 in 17.0313 ms
+2026-11-21 17:25:46.769 -05:00 [INF] Proveedor con ID 1 actualizado (RUC: 0991234567001)
+2026-11-21 17:25:46.776 -05:00 [INF] HTTP PUT /api/proveedores/1 responded 204 in 11.9890 ms
+2026-11-21 17:25:48.081 -05:00 [INF] Proveedor con ID 1 eliminado
+2026-11-21 17:25:48.085 -05:00 [INF] HTTP DELETE /api/proveedores/1 responded 204 in 22.5099 ms
+2026-11-21 17:25:49.734 -05:00 [INF] Buscando proveedor con ID 1
+2026-11-21 17:25:49.745 -05:00 [WRN] No se encontró el proveedor con ID 1
+2026-11-21 17:25:49.770 -05:00 [INF] HTTP GET /api/proveedores/1 responded 404 in 36.6628 ms
+2026-11-21 17:26:02.408 -05:00 [WRN] Intento de crear lote con proveedor inexistente ID 1 para producto 1
+2026-11-21 17:26:02.415 -05:00 [INF] HTTP POST /api/productos/1/lotes responded 404 in 13.4519 ms
+2026-11-21 17:26:08.147 -05:00 [INF] Buscando proveedor con ID 1
+2026-11-21 17:26:08.157 -05:00 [WRN] No se encontró el proveedor con ID 1
+2026-11-21 17:26:08.162 -05:00 [INF] HTTP GET /api/proveedores/1 responded 404 in 15.8431 ms
+2026-11-21 17:26:14.103 -05:00 [INF] Proveedor creado exitosamente: {"ID":2,"Nombre":"Importadora Tech S.A.","Direccion":"Av. Francisco de Orellana, Guayaquil","RUC":"0991234567001","$type":"ProveedorDto"}
+2026-11-21 17:26:14.129 -05:00 [INF] HTTP POST /api/proveedores responded 201 in 34.4254 ms
+2026-11-21 17:26:16.712 -05:00 [INF] Producto con ID 1 eliminado
+2026-11-21 17:26:16.716 -05:00 [INF] HTTP DELETE /api/productos/1 responded 204 in 20.2851 ms
+2026-11-21 17:26:19.899 -05:00 [WRN] Intento de crear lote para producto inexistente con ID 1
+2026-11-21 17:26:19.905 -05:00 [INF] HTTP POST /api/productos/1/lotes responded 404 in 10.2789 ms
+2026-11-21 17:26:21.953 -05:00 [INF] Obteniendo lotes para el producto con ID 1
+2026-11-21 17:26:21.962 -05:00 [WRN] No se encontró el producto con ID 1 al consultar sus lotes
+2026-11-21 17:26:21.967 -05:00 [INF] HTTP GET /api/productos/1/lotes responded 404 in 14.1517 ms
+2026-11-21 17:26:24.022 -05:00 [WRN] Intento de crear lote para producto inexistente con ID 1
+2026-11-21 17:26:24.028 -05:00 [INF] HTTP POST /api/productos/1/lotes responded 404 in 10.2345 ms
+2026-11-21 17:26:35.162 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 17:26:35.172 -05:00 [INF] Se obtuvieron 0 productos
+2026-11-21 17:26:35.176 -05:00 [INF] HTTP GET /api/productos responded 200 in 14.4937 ms
+2026-11-21 17:26:37.187 -05:00 [INF] Producto creado exitosamente: {"ID":2,"Nombre":"Celular Samsung Galaxy S25","$type":"ProductoDto"}
+2026-11-21 17:26:37.198 -05:00 [INF] HTTP POST /api/productos responded 201 in 17.4531 ms
+2026-11-21 17:31:36.551 -05:00 [INF] Application is shutting down...
+2026-11-21 17:31:42.718 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 17:31:42.754 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 17:31:42.759 -05:00 [INF] Hosting environment: Development
+2026-11-21 17:31:42.764 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend\Backend
+2026-11-21 17:32:02.736 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 17:32:04.665 -05:00 [INF] Producto creado exitosamente: {"ID":3,"Nombre":"Papitas fritas","$type":"ProductoDto"}
+2026-11-21 17:32:04.721 -05:00 [INF] HTTP POST /api/productos responded 201 in 1989.4677 ms
+2026-11-21 17:32:27.975 -05:00 [INF] Consultando perfil del usuario 1
+2026-11-21 17:32:28.610 -05:00 [INF] HTTP GET /api/auth/perfil responded 200 in 659.1329 ms
+2026-11-21 17:33:20.943 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 17:33:21.005 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 17:33:21.023 -05:00 [INF] HTTP GET /api/productos responded 200 in 95.2351 ms
+2026-11-21 17:33:32.819 -05:00 [INF] HTTP GET /api/auth/perfil responded 401 in 7.2607 ms
+2026-11-21 17:36:08.425 -05:00 [INF] Application is shutting down...
+2026-11-21 17:36:28.325 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 17:36:28.359 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 17:36:28.364 -05:00 [INF] Hosting environment: Development
+2026-11-21 17:36:28.367 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend\Backend
+2026-11-21 17:36:39.439 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 17:36:39.490 -05:00 [INF] HTTP GET /api/productos responded 401 in 54.4009 ms
+2026-11-21 17:36:42.936 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 17:36:44.826 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 17:36:44.863 -05:00 [INF] HTTP GET /api/productos responded 200 in 2196.2534 ms
+2026-11-21 17:45:34.343 -05:00 [INF] Application is shutting down...
+2026-11-21 20:46:48.446 -05:00 [INF] Now listening on: http://localhost:5139
+2026-11-21 20:46:48.478 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 20:46:48.482 -05:00 [INF] Hosting environment: Development
+2026-11-21 20:46:48.485 -05:00 [INF] Content root path: C:\Users\steve\source\repos\Backend
+2026-11-21 20:50:09.651 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-21 20:50:10.347 -05:00 [INF] Intentando registrar nuevo usuario con correo steverobinsonferaud@gmail.com
+2026-11-21 20:50:12.899 -05:00 [INF] Usuario registrado exitosamente con ID 2 y correo steverobinsonferaud@gmail.com
+2026-11-21 20:50:12.930 -05:00 [INF] HTTP POST /api/auth/registro responded 200 in 3282.2189 ms
+2026-11-21 20:51:42.978 -05:00 [INF] Intento de inicio de sesión para el correo steverobinsonferaud@gmail.com
+2026-11-21 20:51:43.222 -05:00 [INF] Inicio de sesión exitoso para usuario 2 (steverobinsonferaud@gmail.com)
+2026-11-21 20:51:43.233 -05:00 [INF] HTTP POST /api/auth/login responded 200 in 283.9743 ms
+2026-11-21 20:51:43.399 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 20:51:43.399 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 20:51:43.403 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 20:51:43.460 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 20:51:43.590 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 20:51:43.603 -05:00 [INF] HTTP GET /api/productos responded 200 in 296.3680 ms
+2026-11-21 20:51:43.607 -05:00 [INF] HTTP GET /api/lotes responded 200 in 298.4303 ms
+2026-11-21 20:51:43.625 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 20:51:43.639 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 330.3888 ms
+2026-11-21 20:52:11.186 -05:00 [INF] Obteniendo listado completo de lotes
+2026-11-21 20:52:11.190 -05:00 [INF] Obteniendo listado completo de proveedores
+2026-11-21 20:52:11.187 -05:00 [INF] Obteniendo listado completo de productos
+2026-11-21 20:52:11.346 -05:00 [INF] Se obtuvieron 2 productos
+2026-11-21 20:52:11.196 -05:00 [INF] Se obtuvieron 0 lotes
+2026-11-21 20:52:11.359 -05:00 [INF] HTTP GET /api/lotes responded 200 in 180.1889 ms
+2026-11-21 20:52:11.357 -05:00 [INF] HTTP GET /api/productos responded 200 in 181.9718 ms
+2026-11-21 20:52:11.344 -05:00 [INF] Se obtuvieron 1 proveedores
+2026-11-21 20:52:11.379 -05:00 [INF] HTTP GET /api/proveedores responded 200 in 201.2430 ms
+2026-11-21 20:53:39.829 -05:00 [INF] Application is shutting down...
